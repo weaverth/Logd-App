@@ -1,24 +1,819 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hdx-h9-0fZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Get Logging View Controller-->
+        <scene sceneID="wTK-Qd-J9q">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Hdx-h9-0fZ" customClass="GetLoggingViewController" customModule="Logd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3oZ-KR-Xoc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Log'd Logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="JSX-WV-22Z">
+                                <rect key="frame" x="40" y="104" width="334" height="279.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="279.5" id="8nc-bX-DCk"/>
+                                    <constraint firstAttribute="width" constant="334" id="HQi-8V-aSq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8X-Gj-Qse">
+                                <rect key="frame" x="126" y="532" width="162" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63.5" id="Ctj-HE-dUj"/>
+                                    <constraint firstAttribute="width" constant="162" id="Fce-2y-OEQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                <color key="tintColor" name="LogBrown"/>
+                                <state key="normal" title="Get Logging" backgroundImage="capsule.fill" catalog="system">
+                                    <color key="titleColor" name="LogBeige"/>
+                                </state>
+                                <connections>
+                                    <action selector="getLoggingPressed:" destination="Hdx-h9-0fZ" eventType="touchUpInside" id="gz4-mD-cV4"/>
+                                    <segue destination="urb-Jo-SUG" kind="show" identifier="GetLoggingSegue" id="otT-fb-4gF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An App Made For Adventurers By Adventurers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EB2-om-n9j">
+                                <rect key="frame" x="63" y="391.5" width="288" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="7cd-p2-JHU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="31"/>
+                                <color key="textColor" name="LogGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AZE-wX-ead"/>
+                        <color key="backgroundColor" name="LogBeige"/>
+                        <constraints>
+                            <constraint firstItem="AZE-wX-ead" firstAttribute="trailing" secondItem="EB2-om-n9j" secondAttribute="trailing" constant="63" id="4Hn-Be-duU"/>
+                            <constraint firstItem="EB2-om-n9j" firstAttribute="leading" secondItem="AZE-wX-ead" secondAttribute="leading" constant="63" id="Nn5-FJ-UOl"/>
+                            <constraint firstItem="w8X-Gj-Qse" firstAttribute="centerX" secondItem="3oZ-KR-Xoc" secondAttribute="centerX" id="WYi-di-9Fa"/>
+                            <constraint firstItem="EB2-om-n9j" firstAttribute="top" secondItem="JSX-WV-22Z" secondAttribute="bottom" constant="8" id="e3C-WG-jVV"/>
+                            <constraint firstItem="JSX-WV-22Z" firstAttribute="top" secondItem="AZE-wX-ead" secondAttribute="top" constant="60" id="fwc-Go-80Q"/>
+                            <constraint firstItem="JSX-WV-22Z" firstAttribute="centerX" secondItem="3oZ-KR-Xoc" secondAttribute="centerX" id="pz5-mk-9xl"/>
+                            <constraint firstItem="w8X-Gj-Qse" firstAttribute="top" secondItem="EB2-om-n9j" secondAttribute="bottom" constant="8" id="vJd-6E-dA4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O2P-71-Vpy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-213" y="94"/>
+        </scene>
+        <!--Trip List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TripListViewController" customModule="Logd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C7O-yM-Iif">
+                                <rect key="frame" x="0.0" y="66" width="414" height="639"/>
+                                <color key="backgroundColor" name="LogBeige"/>
+                                <color key="sectionIndexBackgroundColor" name="AccentColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="3pK-d6-mhr" customClass="TripTableViewCell" customModule="Logd" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3pK-d6-mhr" id="cLe-gN-0rR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOn-EM-jZ7">
+                                                    <rect key="frame" x="75" y="2" width="349" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                                    <color key="textColor" name="LogGreen"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jan. 32, 2022" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMz-cz-XP8">
+                                                    <rect key="frame" x="68" y="32" width="326" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="13"/>
+                                                    <color key="textColor" name="LogGreen"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hike" translatesAutoresizingMaskIntoConstraints="NO" id="czz-l2-LuZ">
+                                                    <rect key="frame" x="20" y="5" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="LogBeige"/>
+                                        <connections>
+                                            <outlet property="symbolImageView" destination="czz-l2-LuZ" id="UcW-rE-pzd"/>
+                                            <outlet property="tripDateLabel" destination="WMz-cz-XP8" id="nJL-gu-pjC"/>
+                                            <outlet property="tripNameLabel" destination="NOn-EM-jZ7" id="L4k-vX-q3h"/>
+                                            <segue destination="bbh-Ta-LKw" kind="show" identifier="ShowDetail" id="RGf-tt-H9z"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogTitle" translatesAutoresizingMaskIntoConstraints="NO" id="XKP-gT-EVd">
+                                <rect key="frame" x="141.5" y="8" width="131" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="emA-1F-g57"/>
+                                    <constraint firstAttribute="height" constant="50" id="h6o-Pj-MAf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYy-fg-XAT">
+                                <rect key="frame" x="330" y="713" width="64" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="7jd-nT-iAJ"/>
+                                    <constraint firstAttribute="width" constant="64" id="d62-Rx-Hgh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" name="LogBeige"/>
+                                <state key="normal">
+                                    <color key="titleColor" name="LogBeige"/>
+                                    <imageReference key="image" image="mapBeige" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TT1-uU-BvZ" kind="show" identifier="ShowMap" id="dSW-Kx-Q3M"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natureScene" translatesAutoresizingMaskIntoConstraints="NO" id="ilZ-Fg-5YE">
+                                <rect key="frame" x="45" y="13" width="65" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Zg8-zq-fLm"/>
+                                    <constraint firstAttribute="width" constant="65" id="fp9-Se-hFF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natureScene" translatesAutoresizingMaskIntoConstraints="NO" id="aV4-Mr-CQH">
+                                <rect key="frame" x="90" y="13" width="57" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="Gqf-oh-MeV"/>
+                                    <constraint firstAttribute="height" constant="41" id="vN0-Ss-dRI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natureScene" translatesAutoresizingMaskIntoConstraints="NO" id="m1B-eC-A2d">
+                                <rect key="frame" x="0.0" y="13" width="65" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="2hy-un-loo"/>
+                                    <constraint firstAttribute="width" constant="65" id="qa0-A7-Af0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natureScene" translatesAutoresizingMaskIntoConstraints="NO" id="3Fs-47-Mkb">
+                                <rect key="frame" x="312" y="13" width="65" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="iiY-1A-qNg"/>
+                                    <constraint firstAttribute="height" constant="41" id="pzi-Sh-rPr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natureScene" translatesAutoresizingMaskIntoConstraints="NO" id="eyh-Kj-gSl">
+                                <rect key="frame" x="357" y="13" width="57" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Jmz-YK-TJk"/>
+                                    <constraint firstAttribute="width" constant="57" id="Thz-Y3-csI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natureScene" translatesAutoresizingMaskIntoConstraints="NO" id="9ej-D4-SYn">
+                                <rect key="frame" x="262" y="13" width="70" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="MwZ-JU-tMg"/>
+                                    <constraint firstAttribute="width" constant="70" id="bJu-Ia-82H"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xo-mN-p7C">
+                                <rect key="frame" x="20" y="719" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="RBe-eq-fXd"/>
+                                    <constraint firstAttribute="height" constant="45" id="l5K-pd-Pq0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" name="LogBeige"/>
+                                <state key="normal">
+                                    <color key="titleColor" name="LogBeige"/>
+                                    <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Qa5-lR-b7K" kind="presentation" id="VF3-uE-PYS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="LogGreen"/>
+                        <constraints>
+                            <constraint firstItem="ilZ-Fg-5YE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="22E-wA-j2U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MYy-fg-XAT" secondAttribute="trailing" constant="20" id="28Y-4W-EGS"/>
+                            <constraint firstItem="eyh-Kj-gSl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3wa-WN-UJQ"/>
+                            <constraint firstItem="aV4-Mr-CQH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="E0O-TD-A5g"/>
+                            <constraint firstItem="m1B-eC-A2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EQK-3X-K1O"/>
+                            <constraint firstItem="aV4-Mr-CQH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="Hbr-Po-1qK"/>
+                            <constraint firstItem="0xo-mN-p7C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UGP-2j-z3g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0xo-mN-p7C" secondAttribute="bottom" constant="10" id="W9i-tT-3xs"/>
+                            <constraint firstItem="9ej-D4-SYn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="bgE-Uv-FOA"/>
+                            <constraint firstItem="XKP-gT-EVd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bhV-QH-TLp"/>
+                            <constraint firstItem="m1B-eC-A2d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="cfr-H9-okI"/>
+                            <constraint firstItem="3Fs-47-Mkb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="fXl-B6-Jb6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MYy-fg-XAT" secondAttribute="bottom" constant="10" id="kP5-gw-6EW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9ej-D4-SYn" secondAttribute="trailing" constant="82" id="niS-XE-JaN"/>
+                            <constraint firstItem="MYy-fg-XAT" firstAttribute="top" secondItem="C7O-yM-Iif" secondAttribute="bottom" constant="8" id="ose-sv-KsD"/>
+                            <constraint firstItem="eyh-Kj-gSl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="qqr-TT-D48"/>
+                            <constraint firstItem="C7O-yM-Iif" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rU2-jI-7Nc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Fs-47-Mkb" secondAttribute="trailing" constant="37" id="viM-6D-fpa"/>
+                            <constraint firstItem="C7O-yM-Iif" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wkv-nt-q5V"/>
+                            <constraint firstItem="ilZ-Fg-5YE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="xXc-4A-iYV"/>
+                            <constraint firstItem="XKP-gT-EVd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="y7o-70-E1S"/>
+                            <constraint firstItem="C7O-yM-Iif" firstAttribute="top" secondItem="XKP-gT-EVd" secondAttribute="bottom" constant="8" id="ylo-fb-Qax"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="L7H-OE-aZ4">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="YM2-SI-yrR">
+                            <color key="tintColor" name="LogBeige"/>
+                            <connections>
+                                <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="77d-cQ-cha"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kx3-th-lxi">
+                            <color key="tintColor" name="LogBeige"/>
+                            <connections>
+                                <segue destination="EuZ-9u-mUO" kind="presentation" identifier="AddDetail" id="Eeb-lJ-Gqd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addBarButton" destination="kx3-th-lxi" id="YD9-Qp-6YP"/>
+                        <outlet property="tableView" destination="C7O-yM-Iif" id="zEG-nK-yPx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+        </scene>
+        <!--Trip Detail Table View Controller-->
+        <scene sceneID="1dj-xX-p46">
+            <objects>
+                <tableViewController id="bbh-Ta-LKw" customClass="TripDetailTableViewController" customModule="Logd" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="10" sectionFooterHeight="10" id="Dst-wW-46Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="LogBeige"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection headerTitle="Trip Name" id="izZ-jr-8qg">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="MXT-lh-i3y">
+                                        <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MXT-lh-i3y" id="anV-Ta-pwq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="My Trip Name" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JTK-Km-CdO">
+                                                    <rect key="frame" x="5" y="-1" width="404" height="44"/>
+                                                    <color key="backgroundColor" name="LogGreen"/>
+                                                    <color key="textColor" name="LogBeige"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="nameFieldChanged:" destination="bbh-Ta-LKw" eventType="editingDidEnd" id="7KF-Jh-wdv"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JTK-Km-CdO" firstAttribute="leading" secondItem="anV-Ta-pwq" secondAttribute="leading" constant="5" id="Htd-Uq-xbw"/>
+                                                <constraint firstAttribute="bottom" secondItem="JTK-Km-CdO" secondAttribute="bottom" id="VdN-E0-tjU"/>
+                                                <constraint firstAttribute="trailing" secondItem="JTK-Km-CdO" secondAttribute="trailing" constant="5" id="dLQ-xg-FDI"/>
+                                                <constraint firstItem="JTK-Km-CdO" firstAttribute="top" secondItem="anV-Ta-pwq" secondAttribute="top" id="wd2-w5-AWx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="LogBeige"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Trip Type" id="ZgP-Xn-6nX">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="4jW-Tu-W1S">
+                                        <rect key="frame" x="0.0" y="135" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4jW-Tu-W1S" id="dmf-II-hI5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpo-VL-VVe">
+                                                    <rect key="frame" x="163" y="0.0" width="231" height="45"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9c-eV-r9a">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="45" id="TdT-qJ-KR8"/>
+                                                                <constraint firstAttribute="width" constant="45" id="wxf-k3-81M"/>
+                                                            </constraints>
+                                                            <state key="normal" image="hikeGreen"/>
+                                                            <connections>
+                                                                <action selector="typeButtonPressed:" destination="bbh-Ta-LKw" eventType="touchUpInside" id="XbH-nf-zkQ"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBl-DM-7DJ">
+                                                            <rect key="frame" x="62" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="G7a-LJ-V5d"/>
+                                                                <constraint firstAttribute="height" constant="45" id="px0-C5-vwq"/>
+                                                            </constraints>
+                                                            <state key="normal" image="bikeGreen"/>
+                                                            <connections>
+                                                                <action selector="typeButtonPressed:" destination="bbh-Ta-LKw" eventType="touchUpInside" id="EE9-yC-liy"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCS-iB-E03">
+                                                            <rect key="frame" x="124" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="MDh-u4-7bv"/>
+                                                                <constraint firstAttribute="height" constant="45" id="pfb-hG-9bz"/>
+                                                            </constraints>
+                                                            <state key="normal" image="kayakGreen"/>
+                                                            <connections>
+                                                                <action selector="typeButtonPressed:" destination="bbh-Ta-LKw" eventType="touchUpInside" id="pea-2N-98q"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7C-eh-31m">
+                                                            <rect key="frame" x="186" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="45" id="1mr-Tf-eEF"/>
+                                                                <constraint firstAttribute="width" constant="45" id="OCj-qy-0O1"/>
+                                                            </constraints>
+                                                            <state key="normal" image="climbGreen"/>
+                                                            <connections>
+                                                                <action selector="typeButtonPressed:" destination="bbh-Ta-LKw" eventType="touchUpInside" id="PP8-DA-PtY"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="s3r-wW-ffF"/>
+                                                        <constraint firstAttribute="width" constant="231" id="ys5-fo-OuK"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hike" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61c-M7-N1w">
+                                                    <rect key="frame" x="20" y="10" width="76" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="76" id="dAo-AB-sgh"/>
+                                                        <constraint firstAttribute="height" constant="22" id="odB-cX-2aE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Rockwell-BoldItalic" family="Rockwell" pointSize="18"/>
+                                                    <color key="textColor" name="LogBrown"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="61c-M7-N1w" firstAttribute="top" secondItem="dmf-II-hI5" secondAttribute="top" constant="10" id="12e-MC-cdL"/>
+                                                <constraint firstItem="bpo-VL-VVe" firstAttribute="top" secondItem="dmf-II-hI5" secondAttribute="top" id="KGP-MG-4RU"/>
+                                                <constraint firstItem="61c-M7-N1w" firstAttribute="leading" secondItem="dmf-II-hI5" secondAttribute="leading" constant="20" id="hdV-e7-rxe"/>
+                                                <constraint firstAttribute="trailing" secondItem="bpo-VL-VVe" secondAttribute="trailing" constant="20" id="lOl-JX-qlU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="LogBeige"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Trip Date" id="Fpa-vO-pt2">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="90" id="Umf-3A-02R">
+                                        <rect key="frame" x="0.0" y="220.5" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Umf-3A-02R" id="itQ-JE-nPc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="K58-rO-zgZ">
+                                                    <rect key="frame" x="20" y="11" width="374" height="68"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                </datePicker>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="LogBeige"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Trip Location" id="Cv1-bm-Gnu">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="230" id="6NV-h2-f0I">
+                                        <rect key="frame" x="0.0" y="352.5" width="414" height="230"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6NV-h2-f0I" id="rqV-d2-MOQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BCK-xd-Q2v">
+                                                    <rect key="frame" x="20" y="81" width="374" height="149"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="bbh-Ta-LKw" id="nVW-nk-0wT"/>
+                                                    </connections>
+                                                </mapView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaT-Rp-53h">
+                                                    <rect key="frame" x="20" y="45" width="374" height="36"/>
+                                                    <color key="backgroundColor" name="LogGreen"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="Ep1-8M-XSM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Rockwell-BoldItalic" family="Rockwell" pointSize="18"/>
+                                                    <color key="textColor" name="LogBeige"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38c-qW-Hoa">
+                                                    <rect key="frame" x="268" y="11" width="126" height="30"/>
+                                                    <color key="backgroundColor" name="LogBrown"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="KY1-Re-9x9"/>
+                                                        <constraint firstAttribute="width" constant="126" id="SVd-DP-2nT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="13"/>
+                                                    <state key="normal" title="Lookup Location">
+                                                        <color key="titleColor" name="LogBeige"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="locationButtonPressed:" destination="bbh-Ta-LKw" eventType="touchUpInside" id="93m-13-K4C"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="38c-qW-Hoa" firstAttribute="top" secondItem="rqV-d2-MOQ" secondAttribute="topMargin" id="10u-44-YFs"/>
+                                                <constraint firstItem="iaT-Rp-53h" firstAttribute="top" secondItem="38c-qW-Hoa" secondAttribute="bottom" constant="4" id="1pe-bx-a3b"/>
+                                                <constraint firstItem="38c-qW-Hoa" firstAttribute="trailing" secondItem="rqV-d2-MOQ" secondAttribute="trailingMargin" id="3Pb-qp-XcV"/>
+                                                <constraint firstItem="iaT-Rp-53h" firstAttribute="leading" secondItem="rqV-d2-MOQ" secondAttribute="leadingMargin" id="FN8-iz-lW8"/>
+                                                <constraint firstAttribute="bottom" secondItem="BCK-xd-Q2v" secondAttribute="bottom" id="Imc-Vn-t8g"/>
+                                                <constraint firstItem="BCK-xd-Q2v" firstAttribute="top" secondItem="iaT-Rp-53h" secondAttribute="bottom" id="LtJ-4O-YWn"/>
+                                                <constraint firstItem="BCK-xd-Q2v" firstAttribute="leading" secondItem="rqV-d2-MOQ" secondAttribute="leading" constant="20" id="TkP-4i-aeC"/>
+                                                <constraint firstAttribute="trailing" secondItem="BCK-xd-Q2v" secondAttribute="trailing" constant="20" id="mck-ob-qZO"/>
+                                                <constraint firstItem="iaT-Rp-53h" firstAttribute="trailing" secondItem="rqV-d2-MOQ" secondAttribute="trailingMargin" id="upS-6Y-67a"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="LogBeige"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Trip Notes" id="uZA-bj-dsB">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="200" id="OQ3-pA-5cA">
+                                        <rect key="frame" x="0.0" y="624.5" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OQ3-pA-5cA" id="P9b-s0-jck">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write Notes Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zfp-r9-20v">
+                                                    <rect key="frame" x="20" y="11" width="374" height="178"/>
+                                                    <color key="backgroundColor" name="LogWhite"/>
+                                                    <color key="tintColor" name="LogWhite"/>
+                                                    <color key="textColor" name="LogGreen"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Zfp-r9-20v" secondAttribute="trailing" id="2WU-nE-dqe"/>
+                                                <constraint firstItem="Zfp-r9-20v" firstAttribute="leading" secondItem="P9b-s0-jck" secondAttribute="leadingMargin" id="XCi-ne-CM8"/>
+                                                <constraint firstItem="Zfp-r9-20v" firstAttribute="top" secondItem="P9b-s0-jck" secondAttribute="topMargin" id="am1-ew-DGG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Zfp-r9-20v" secondAttribute="bottom" id="n01-C7-YEP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="LogBeige"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="bbh-Ta-LKw" id="fm9-up-OGA"/>
+                            <outlet property="delegate" destination="bbh-Ta-LKw" id="SXK-v5-OWd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ePD-4i-DKE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YL0-vH-1hX">
+                            <color key="tintColor" name="LogBeige"/>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="bbh-Ta-LKw" id="Uqq-Bu-gL0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ynH-pJ-zPF">
+                            <color key="tintColor" name="LogBeige"/>
+                            <connections>
+                                <segue destination="rsd-ss-d0V" kind="unwind" unwindAction="unwindFromDetailWithSegue:" id="AFT-Z8-8Yt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bikeButton" destination="WBl-DM-7DJ" id="xVE-4B-JMs"/>
+                        <outlet property="climbButton" destination="F7C-eh-31m" id="ln8-gv-8zJ"/>
+                        <outlet property="datePicker" destination="K58-rO-zgZ" id="MqG-iq-jol"/>
+                        <outlet property="hikeButton" destination="c9c-eV-r9a" id="Tj9-OY-lLp"/>
+                        <outlet property="kayakButton" destination="wCS-iB-E03" id="hCV-3h-DvQ"/>
+                        <outlet property="locationNameLabel" destination="iaT-Rp-53h" id="7vP-Cp-sII"/>
+                        <outlet property="mapView" destination="BCK-xd-Q2v" id="0gX-in-bWh"/>
+                        <outlet property="notesTextView" destination="Zfp-r9-20v" id="S37-eH-fqm"/>
+                        <outlet property="saveBarButton" destination="ynH-pJ-zPF" id="2v3-7O-X9S"/>
+                        <outlet property="tripNameTextField" destination="JTK-Km-CdO" id="g7t-1n-Fae"/>
+                        <outlet property="tripTypeLabel" destination="61c-M7-N1w" id="MgB-JH-CQy"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIJ-rF-5ty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="rsd-ss-d0V" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2075" y="94"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="h9C-JU-8fE">
+            <objects>
+                <viewController id="Qa5-lR-b7K" customClass="AboutViewController" customModule="Logd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uXB-PZ-2bO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Log'd Logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="SVx-v9-Tiv">
+                                <rect key="frame" x="67.5" y="10" width="279" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="279" id="GIp-zM-iz7"/>
+                                    <constraint firstAttribute="height" constant="205" id="z0z-jP-mLu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made By Teddy Weaver" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiu-tB-hmH">
+                                <rect key="frame" x="20" y="235" width="374" height="27"/>
+                                <fontDescription key="fontDescription" name="Rockwell-BoldItalic" family="Rockwell" pointSize="27"/>
+                                <color key="textColor" name="LogGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teddy" translatesAutoresizingMaskIntoConstraints="NO" id="1ae-xy-V30">
+                                <rect key="frame" x="64" y="272" width="287" height="328"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="Lg6-66-Rdg"/>
+                                    <constraint firstAttribute="height" constant="328" id="eyI-Ui-jTQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7E-I1-kaE">
+                                <rect key="frame" x="130" y="608" width="154" height="30"/>
+                                <color key="backgroundColor" name="LogBrown"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="32k-2i-8sw"/>
+                                    <constraint firstAttribute="width" constant="154" id="kXV-9p-cuE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                <color key="tintColor" name="LogBrown"/>
+                                <state key="normal" title="Kowabunga!">
+                                    <color key="titleColor" name="LogBeige"/>
+                                </state>
+                                <connections>
+                                    <action selector="getLoggingPressed:" destination="Hdx-h9-0fZ" eventType="touchUpInside" id="7D7-j0-1Qk"/>
+                                    <action selector="kowabungaButtonPressed:" destination="Qa5-lR-b7K" eventType="touchUpInside" id="xxj-zJ-TZQ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powered_by_google_on_white" translatesAutoresizingMaskIntoConstraints="NO" id="Iy8-1k-PxI">
+                                <rect key="frame" x="60" y="646" width="294" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="QUJ-0Q-qog"/>
+                                    <constraint firstAttribute="width" constant="293" id="aO8-3C-G2Q"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vup-IG-mdn">
+                                <rect key="frame" x="20" y="778" width="82" height="30"/>
+                                <color key="backgroundColor" name="LogBrown"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8cT-6s-UUL"/>
+                                    <constraint firstAttribute="width" constant="82" id="Ky6-WU-IS0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                <color key="tintColor" name="LogBrown"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" name="LogBeige"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="Qa5-lR-b7K" eventType="touchUpInside" id="MT4-bA-ZUF"/>
+                                    <action selector="getLoggingPressed:" destination="Hdx-h9-0fZ" eventType="touchUpInside" id="ocW-Li-Y9E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h1v-yy-UYY"/>
+                        <color key="backgroundColor" name="LogBeige"/>
+                        <constraints>
+                            <constraint firstItem="h1v-yy-UYY" firstAttribute="trailing" secondItem="xiu-tB-hmH" secondAttribute="trailing" constant="20" id="CwC-6F-vrO"/>
+                            <constraint firstItem="xiu-tB-hmH" firstAttribute="leading" secondItem="h1v-yy-UYY" secondAttribute="leading" constant="20" id="Gp7-Ex-hvH"/>
+                            <constraint firstItem="vup-IG-mdn" firstAttribute="bottom" secondItem="h1v-yy-UYY" secondAttribute="bottom" id="PuE-wo-vyD"/>
+                            <constraint firstItem="x7E-I1-kaE" firstAttribute="centerX" secondItem="uXB-PZ-2bO" secondAttribute="centerX" id="Qnl-2T-ec9"/>
+                            <constraint firstItem="Iy8-1k-PxI" firstAttribute="top" secondItem="x7E-I1-kaE" secondAttribute="bottom" constant="8" id="Qqz-iB-Wfg"/>
+                            <constraint firstItem="SVx-v9-Tiv" firstAttribute="top" secondItem="h1v-yy-UYY" secondAttribute="top" constant="10" id="VO0-DC-6cc"/>
+                            <constraint firstItem="Iy8-1k-PxI" firstAttribute="centerX" secondItem="uXB-PZ-2bO" secondAttribute="centerX" id="W09-cn-B9m"/>
+                            <constraint firstItem="1ae-xy-V30" firstAttribute="top" secondItem="xiu-tB-hmH" secondAttribute="bottom" constant="10" id="ZLM-xu-zWp"/>
+                            <constraint firstItem="1ae-xy-V30" firstAttribute="centerX" secondItem="uXB-PZ-2bO" secondAttribute="centerX" constant="0.5" id="k9n-Or-7Ef"/>
+                            <constraint firstItem="vup-IG-mdn" firstAttribute="leading" secondItem="h1v-yy-UYY" secondAttribute="leading" constant="20" id="ljv-xS-n3v"/>
+                            <constraint firstItem="x7E-I1-kaE" firstAttribute="top" secondItem="1ae-xy-V30" secondAttribute="bottom" constant="8" id="yOh-nZ-BzF"/>
+                            <constraint firstItem="xiu-tB-hmH" firstAttribute="top" secondItem="SVx-v9-Tiv" secondAttribute="bottom" constant="20" id="yrr-57-tBe"/>
+                            <constraint firstItem="SVx-v9-Tiv" firstAttribute="centerX" secondItem="uXB-PZ-2bO" secondAttribute="centerX" id="zid-zu-Nfv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tedImage" destination="1ae-xy-V30" id="cUC-Bi-gKf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1UG-2d-Mh2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366.66666666666669" y="818.97321428571422"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="XEL-EU-gZA">
+            <objects>
+                <viewController id="TT1-uU-BvZ" customClass="MapViewController" customModule="Logd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lIz-Yy-oCI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c4g-mm-sVZ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="627"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogTitle" translatesAutoresizingMaskIntoConstraints="NO" id="tDp-9e-lW6">
+                                <rect key="frame" x="20" y="20" width="91" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="cdx-LT-Y1o"/>
+                                    <constraint firstAttribute="width" constant="91" id="xCi-kT-Czl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adventure Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-29-cDi">
+                                <rect key="frame" x="113.5" y="20" width="187" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="NvF-0g-sPK"/>
+                                    <constraint firstAttribute="height" constant="38" id="bSG-GR-0U7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="21"/>
+                                <color key="textColor" name="LogBeige"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMB-zT-V9j">
+                                <rect key="frame" x="39" y="736" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="23Y-OW-5Kp"/>
+                                    <constraint firstAttribute="width" constant="44" id="Kcl-g7-l7M"/>
+                                </constraints>
+                                <state key="normal" image="tripSymbol">
+                                    <color key="titleColor" name="LogBeige"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomButtonPressed:" destination="TT1-uU-BvZ" eventType="touchUpInside" id="27p-4F-i5S"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7C4-dt-Udc">
+                                <rect key="frame" x="20" y="748" width="11" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="11" id="UUf-Fs-4L9"/>
+                                    <constraint firstAttribute="height" constant="21" id="Wsm-mw-k55"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="LogGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9Q-Xt-XoK">
+                                <rect key="frame" x="331" y="736" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="4od-Ql-GRm"/>
+                                    <constraint firstAttribute="height" constant="44" id="FyG-yh-Y9z"/>
+                                </constraints>
+                                <state key="normal" image="tripSymbol">
+                                    <color key="titleColor" name="LogBeige"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomButtonPressed:" destination="TT1-uU-BvZ" eventType="touchUpInside" id="UYx-CZ-39Q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC4-Ku-qgL">
+                                <rect key="frame" x="383" y="748" width="11" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ED4-Zj-WTu"/>
+                                    <constraint firstAttribute="width" constant="11" id="b4Z-Gd-Hc5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="LogGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJL-QW-9jB">
+                                <rect key="frame" x="152.5" y="738" width="109" height="40"/>
+                                <color key="backgroundColor" name="LogGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="430-mC-vS9"/>
+                                    <constraint firstAttribute="height" constant="40" id="huY-91-E1l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="15"/>
+                                <state key="normal" title="Zoom to Trip">
+                                    <color key="titleColor" name="LogBeige"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomButtonPressed:" destination="TT1-uU-BvZ" eventType="touchUpInside" id="efp-IF-itm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TBi-NE-WBj"/>
+                        <color key="backgroundColor" name="LogBrown"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oMB-zT-V9j" secondAttribute="bottom" constant="28" id="04S-Ch-qic"/>
+                            <constraint firstItem="TBi-NE-WBj" firstAttribute="bottom" secondItem="c4g-mm-sVZ" secondAttribute="bottom" constant="59" id="6gB-5E-UcO"/>
+                            <constraint firstItem="gaY-29-cDi" firstAttribute="centerX" secondItem="lIz-Yy-oCI" secondAttribute="centerX" id="7Fi-XU-efM"/>
+                            <constraint firstItem="tDp-9e-lW6" firstAttribute="leading" secondItem="TBi-NE-WBj" secondAttribute="leading" constant="20" id="Bos-gM-90L"/>
+                            <constraint firstItem="c4g-mm-sVZ" firstAttribute="top" secondItem="tDp-9e-lW6" secondAttribute="bottom" constant="30" id="Bta-xt-p72"/>
+                            <constraint firstItem="c4g-mm-sVZ" firstAttribute="trailing" secondItem="TBi-NE-WBj" secondAttribute="trailing" id="CvR-xo-3YF"/>
+                            <constraint firstItem="TBi-NE-WBj" firstAttribute="trailing" secondItem="LC4-Ku-qgL" secondAttribute="trailing" constant="20" id="GDg-R7-2I2"/>
+                            <constraint firstItem="oMB-zT-V9j" firstAttribute="leading" secondItem="7C4-dt-Udc" secondAttribute="trailing" constant="8" id="JUj-wm-DvN"/>
+                            <constraint firstAttribute="bottom" secondItem="O9Q-Xt-XoK" secondAttribute="bottom" constant="28" id="RPY-Vg-99k"/>
+                            <constraint firstItem="IJL-QW-9jB" firstAttribute="centerX" secondItem="lIz-Yy-oCI" secondAttribute="centerX" id="WYv-wl-6eZ"/>
+                            <constraint firstItem="LC4-Ku-qgL" firstAttribute="leading" secondItem="O9Q-Xt-XoK" secondAttribute="trailing" constant="8" id="aU3-Rc-Kuj"/>
+                            <constraint firstItem="c4g-mm-sVZ" firstAttribute="leading" secondItem="TBi-NE-WBj" secondAttribute="leading" id="bVW-gg-Iet"/>
+                            <constraint firstItem="TBi-NE-WBj" firstAttribute="bottom" secondItem="LC4-Ku-qgL" secondAttribute="bottom" constant="5" id="kN8-Ga-Wpa"/>
+                            <constraint firstItem="gaY-29-cDi" firstAttribute="top" secondItem="TBi-NE-WBj" secondAttribute="top" constant="20" id="mMD-rx-l66"/>
+                            <constraint firstItem="TBi-NE-WBj" firstAttribute="bottom" secondItem="7C4-dt-Udc" secondAttribute="bottom" constant="5" id="nBO-eF-EGz"/>
+                            <constraint firstItem="7C4-dt-Udc" firstAttribute="leading" secondItem="TBi-NE-WBj" secondAttribute="leading" constant="20" id="nbu-cx-MrE"/>
+                            <constraint firstAttribute="bottom" secondItem="IJL-QW-9jB" secondAttribute="bottom" constant="30" id="rAK-7S-91r"/>
+                            <constraint firstItem="tDp-9e-lW6" firstAttribute="top" secondItem="TBi-NE-WBj" secondAttribute="top" constant="20" id="uhl-2u-LPK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ujr-8H-C8Y"/>
+                    <connections>
+                        <outlet property="mapView" destination="c4g-mm-sVZ" id="7sC-Tb-mZs"/>
+                        <outlet property="mapZoomButton" destination="IJL-QW-9jB" id="dju-k6-5a9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPL-87-Q2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560.8695652173915" y="818.97321428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wCF-eP-5pR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="urb-Jo-SUG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="UUb-xA-dpk"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="aTt-NB-Jnh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="LogBeige"/>
+                        <color key="tintColor" name="LogBeige"/>
+                        <color key="barTintColor" name="LogGreen"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YIz-jO-oSQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4Y-j7-rDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="529" y="-599"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HX4-EH-EZr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="EuZ-9u-mUO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="De6-3j-X8d"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pDV-AD-GoJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="LogGreen"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bbh-Ta-LKw" kind="relationship" relationship="rootViewController" id="LNE-Bk-ZK1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xmh-h5-fSF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613" y="-599"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LNE-Bk-ZK1"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Log'd Logo-1" width="500" height="500"/>
+        <image name="LogTitle" width="1366" height="588"/>
+        <image name="bikeGreen" width="500" height="500"/>
+        <image name="capsule.fill" catalog="system" width="128" height="94"/>
+        <image name="climbGreen" width="500" height="500"/>
+        <image name="hike" width="500" height="500"/>
+        <image name="hikeGreen" width="500" height="500"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="kayakGreen" width="500" height="500"/>
+        <image name="mapBeige" width="577" height="461"/>
+        <image name="natureScene" width="551" height="414"/>
+        <image name="powered_by_google_on_white" width="144" height="18"/>
+        <image name="teddy" width="1098" height="1416"/>
+        <image name="tripSymbol" width="602" height="574"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LogBeige">
+            <color red="0.98400002717971802" green="0.92900002002716064" blue="0.88599997758865356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="LogBrown">
+            <color red="0.4779999852180481" green="0.41999998688697815" blue="0.37599998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="LogGreen">
+            <color red="0.17599999904632568" green="0.32499998807907104" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="LogWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>
