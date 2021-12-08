@@ -2,7 +2,7 @@
 //  MapViewController.swift
 //  Logd
 //
-//  Created by Teddy Weaver on 11/25/21.
+//  Created by Teddy Weaver on 12/3/21.
 //
 
 import UIKit

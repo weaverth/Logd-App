@@ -2,7 +2,7 @@
 //  TripTableViewCell.swift
 //  Logd
 //
-//  Created by Teddy Weaver on 12/5/21.
+//  Created by Teddy Weaver on 12/3/21.
 //
 
 import UIKit

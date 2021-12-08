@@ -2,7 +2,7 @@
 //  AboutViewController.swift
 //  Logd
 //
-//  Created by Teddy Weaver on 12/6/21.
+//  Created by Teddy Weaver on 12/3/21.
 //
 
 import UIKit
